@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="compose" layoutX="11.0" layoutY="20.0" mnemonicParsing="false" onAction="#composeAction" text="Compose" />
+      <TreeView fx:id="emailtreeview" layoutX="11.0" layoutY="61.0" prefHeight="558.0" prefWidth="234.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="61.0" />
+      <TableView fx:id="emailBox" layoutX="248.0" layoutY="61.0" prefHeight="190.0" prefWidth="647.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="61.0">
+         <columns>
+            <TableColumn fx:id="subjectCol" prefWidth="221.60003662109375" text="Subject" />
+            <TableColumn fx:id="senderCol" prefWidth="213.59994506835938" text="Sender" />
+            <TableColumn fx:id="sizeCol" prefWidth="94.39996337890625" text="Size" />
+         </columns></TableView>
+      <WebView fx:id="messageRenderer" layoutX="248.0" layoutY="251.0" prefHeight="366.0" prefWidth="647.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="251.0" />
+      <Label fx:id="downattachlabel" layoutX="748.0" layoutY="11.0" text="downloading Attachments" AnchorPane.rightAnchor="21.0" />
+      <ProgressBar fx:id="downattachprogress" layoutX="755.0" layoutY="36.0" prefHeight="18.0" prefWidth="140.0" progress="0.0" AnchorPane.rightAnchor="14.0" />
+      <Button fx:id="downattachbutton" layoutX="584.0" layoutY="23.0" mnemonicParsing="false" onAction="#downloadingattachment" text="download Attachments" AnchorPane.rightAnchor="185.8" />
+      <Button fx:id="addaccountbtn" layoutX="102.0" layoutY="20.0" mnemonicParsing="false" onAction="#addaccountaction" text="Add Account" AnchorPane.leftAnchor="102.0" />
+   </children>
+</AnchorPane>
